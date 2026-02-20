@@ -3,7 +3,7 @@ package com.portfolio.apryan.taskmanager.model;
 import jakarta.persistence.*;
 
 @Entity
-public class Perfil {
+public class Profile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,10 +12,10 @@ public class Perfil {
     @Column
     public String nome;
 
-    public Perfil() {
+    public Profile() {
     }
 
-    public Perfil(String nome) {
+    public Profile(String nome) {
         this.nome = nome;
     }
 

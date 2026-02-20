@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-public class Tarefa {
+public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class Tarefa {
     private String nome;
 
     @ManyToOne
-    private Perfil perfil;
+    private Profile profile;
 
     @Column
     private String descricao;
@@ -38,11 +38,11 @@ public class Tarefa {
                 '}';
     }
 
-    public Tarefa(){
+    public Task(){
 
     }
 
-    public Tarefa(String nome, String descricao, LocalDate prazo, Priority status) {
+    public Task(String nome, String descricao, LocalDate prazo, Priority status) {
         this.nome = nome;
         this.descricao = descricao;
         this.prazo = prazo;
@@ -81,11 +81,11 @@ public class Tarefa {
         this.status = status;
     }
 
-    public Perfil getPerfil() {
-        return perfil;
+    public Profile getPerfil() {
+        return profile;
     }
 
-    public void setPerfil(Perfil perfil) {
-        this.perfil = perfil;
+    public void setPerfil(Profile profile) {
+        this.profile = profile;
     }
 }

@@ -1,11 +1,11 @@
 package com.portfolio.apryan.taskmanager.repository;
 
-import com.portfolio.apryan.taskmanager.model.Perfil;
+import com.portfolio.apryan.taskmanager.model.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PerfilRepository extends JpaRepository<Perfil, Integer> {
+public interface ProfileRepository extends JpaRepository<Profile, Integer> {
 
 
 }
